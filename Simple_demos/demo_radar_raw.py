@@ -161,7 +161,7 @@ def main():
 
     os.makedirs('radar_cirs', exist_ok=True)
     cir_file = open(filename, 'w', encoding='utf-8', newline='')
-    writer = csv.writer(cir_file, delimiter=";")
+    writer = csv.writer(cir_file, delimiter=",")
     writer.writerow(["measurement_idx", "device_name", "session_id", "status", "ts", "sequence_number", "receiver", "rx_antenna_idx", "tx_antenna_idx", "rx_gain_idx", "radar_mode", "dc_freeze", "single_pin", "cir_start_offset", "cir_header", "cir_data", "groundtruth_distance_cm", "groundtruth_aoa_azimuth_deg", "groundtruth_aoa_elevation_deg", "groundtruth_amplitude_cm", "groundtruth_frequency_hz"])
 
     handler = SIGINThandler()
